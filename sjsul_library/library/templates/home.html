@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to SJSUL Library</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Welcome to SJSUL Library</h1>
+    <p><a href="{% url 'login' %}">Login</a></p>
+    <p><a href="{% url 'register' %}">Register</a></p>
+</body>
+</html>

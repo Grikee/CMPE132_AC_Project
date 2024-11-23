@@ -1,0 +1,23 @@
+python3 manage.py ...
+    - shell (python commands to manage roles)
+        - print(f"{name.libraryuser.role}") // to display user role
+    - runserver (runserver)
+
+sqlite3 db.sqlite3 (access website database)
+    SELECT auth_user.username, auth_user.password, library_libraryuser.role 
+    FROM auth_user 
+    JOIN library_libraryuser
+    ON auth_user.id = library_libraryuser.user_id;
+        - Displays username, hashed user password, and role
+    
+    .tables
+        - view tables
+        auth_group                  django_admin_log
+        auth_group_permissions      django_content_type
+        auth_permission             django_migrations
+        auth_user                   django_session
+        auth_user_groups            library_libraryuser
+        auth_user_user_permissions  library_role
+        
+    .schema nameOfTable
+        - shows schema for tables

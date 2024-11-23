@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Member Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Member Dashboard, {{ request.user.username }}!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="{% url 'librarian_dashboard' %}">Librarian Dashboard</a></li>
+                <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Dashboard</h2>
+        <p>Here you can view your borrowed books, upcoming due dates, and more.</p>
+
+        <!-- Example content -->
+        <section>
+            <h3>Your Borrowed Books</h3>
+            <ul>
+                <!-- Loop through borrowed books or any other relevant data -->
+                <li>Book Title 1 - Due Date: 2024-11-30</li>
+                <li>Book Title 2 - Due Date: 2024-12-10</li>
+            </ul>
+        </section>
+
+
+    </main>
+</body>
+</html>
